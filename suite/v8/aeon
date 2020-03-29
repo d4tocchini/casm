@@ -1,0 +1,13 @@
+v8_opt_flags() {
+    #https://flaviocopes.com/node-runtime-v8-options/
+    # –fast-math
+    # --experimental-extras
+    # --wasm-opt
+    --prepare-always-opt
+    --always-opt
+    --always-osr
+    --predictable	enable predictable mode
+    node --v8-options | grep opt
+}
+# --print-deopt-stress
+node --trace-deopt ./suite/perf/_fn_deopt.js | grep fn

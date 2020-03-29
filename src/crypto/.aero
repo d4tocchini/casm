@@ -1,0 +1,115 @@
+
+# https://github.com/Homebrew/homebrew-core/blob/master/Formula/libsodium.rb
+# https://github.com/jedisct1/libhydrogen.git
+
+# gmake
+
+
+`space ae` # print "++++ $SPACENAME : $DIRNAME ++++"
+function () {
+
+    `mod crypto`
+
+    # print "++++ $mod_name : $this : $fn_prefix : $mod_dir ++++"
+
+    # --dev: () -d
+    # --production: () -p
+    # -d: () {
+    #     NODE_ENV=development
+    # }
+    # -p: () {
+    #     export NODE_ENV=production
+    # }
+
+    `fn pull` () {
+        print 'hello!'
+    }
+    `fn i install` () {
+        npm i
+    }
+    `fn clean` () {
+        rm -fR ./build ./bin $@
+    }
+    `fn fresh` () {
+        clean ./node_modules
+    }
+    `fn build` () {
+        CC=gcc-9 HOME=~/.electron-gyp node-gyp rebuild ;
+    }
+    `fn rebuild` () {
+        print "++++ $SPACENAME : $DIRNAME ++++"
+        print "++++ $xx : $mod_name : $mod_path : $fn_prefix : $mod_dir ++++"
+        print "mod_path = ${mod_path}"
+        ${mod_path} clean
+        ${mod_path} build
+    }
+    `fn run-e` () {
+        # -e: ()
+        # {
+            ./node_modules/.bin/electron ./main.js;
+        # }
+    }
+    `fn run-v8` () {
+        # {
+            node ./main.js;
+        # }
+        # --: || -v8:
+        # @:
+        # ((!$#)) &&
+    }
+}
+
+# `@mod c-api` () {
+#     print c-api
+
+#     `@pub hello` () {
+#         print 'hello!'
+#     }
+
+#     --dev: () -d
+#     --production: () -p
+
+#     -d: () {
+#         NODE_ENV=development
+#     }
+#     -p: () {
+#         export NODE_ENV=production
+#     }
+
+#     # --: || -p:
+
+#     `@fn
+#     install i` () {
+#         npm i
+#     }
+#     `@fn
+#     clean` () {
+#         rm -fR ./build ./bin $@
+#     }
+#     fresh: () {
+#         clean ./node_modules
+#     }
+#     build: () {
+#         CC=gcc-9 HOME=~/.electron-gyp node-gyp rebuild ;
+#     }
+#     rebuild: () {
+#         clean
+#         build
+#     }
+#     run: () {
+#         -e: ()
+#         {
+#             ./node_modules/.bin/electron ./main.js;
+#         }
+#         -v8: ()
+#         {
+#             node ./main.js;
+#         }
+#         # --: || -v8:
+#         # @:
+#         ((!$#)) &&
+#     }
+#     @:
+#     # ${argv}
+#     # @: || __HELP__
+# }

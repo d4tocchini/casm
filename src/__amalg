@@ -1,0 +1,17 @@
+__head.c
+        malloc/malloc.c
+        hash.c
+        map.c
+        abi.c
+        crypto/box.c
+        crypto/random.c
+        crypto/password.c
+        crypto/exports.c
+        job.c
+        ems/src/ems_alloc.c
+        ems/src/ems.c
+        ems/src/ems_atomic.c
+        ems/src/ems_collective.c
+        ems.c
+        jit.c
+__tail.c

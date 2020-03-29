@@ -1,0 +1,28 @@
+{
+  "name": "casm",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/casm.js",
+  "scripts": {
+    "build": "oosh '. pkg.sh; pkg.casm.build;'",
+    "rebuild": "oosh '. pkg.sh; pkg.casm.rebuild;'",
+    "bench": "oosh '. pkg.sh; pkg.casm.bench;'",
+    "test": "oosh '. pkg.sh; pkg.casm.test;'",
+    "clean": "oosh '. pkg.sh; pkg.casm.clean;'",
+    "start-electron": "./node_modules/.bin/electron main.js"
+  },
+  "author": "",
+  "files": [
+    "c.js",
+    "d.js",
+    "casm.js",
+    "build/",
+    "src/fs"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "oosh": "d4tocchini/oosh",
+    "node-gyp": "6.1.0",
+    "electron": "8.2.0"
+  }
+}

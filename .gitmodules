@@ -1,0 +1,12 @@
+[submodule "pkg/ems"]
+	path = pkg/ems
+	url = git@github.com:d4tocchini/ems.git
+[submodule "pkg/libhydrogen"]
+	path = pkg/libhydrogen
+	url = https://github.com/jedisct1/libhydrogen
+[submodule "pkg/napi-macros"]
+	path = pkg/napi-macros
+	url = git@github.com:d4tocchini/napi-macros.git
+[submodule "pkg/sx"]
+	path = pkg/sx
+	url = git@github.com:d4tocchini/sx.git
