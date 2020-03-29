@@ -1,0 +1,6 @@
+.vscode
+*.zwc
+build
+zzz
+node_modules
+.DS_Store
