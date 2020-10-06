@@ -23,6 +23,6 @@
   "devDependencies": {
     "oosh": "d4tocchini/oosh",
     "node-gyp": "6.1.0",
-    "electron": "8.2.0"
+    "electron": "10.1.3"
   }
 }
